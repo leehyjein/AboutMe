@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/7f4a6a3d71.js" crossorigin="anonymous"></script>
+        <script src="script.js" type="text/javascript" defer></script>
+        <title>leehyejin🔎</title>
+    </head>
+    <body>
+        <section id="home">
+            <div class="full-page">
+            <header>
+                <a href="website.html" alt="">Lee hyejin</a>
+                <ul id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#motivation">Motivation</a></li>
+                    <li><a href="#like">Like</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </header>
+                <div class="profile_box">
+                <img class="profile" src="img/me.jpg">
+                <div class="profile_dsc">
+                    <hr class="TopLine">
+                    <br>
+                    <h2>
+                        Hello Stranger!
+                    </h2>
+                    <br>
+                    <p>
+                        Hello, my name is Hyejin Lee, who wants to be a front-end developer.
+                        <br>
+                        If you want to know more about me, please scroll down.
+                    </p>
+                        <hr class="Bottomline">
+                </div>
+            </div>
+
+        </div>
+        </section>
+        <section id="motivation">
+            <h1>Motivation</h1>
+            <div class="content">
+                <img class="motive" src="img/Motiv.PNG">
+                <h4>The 10,000 Hours Rule</h4>
+                <br>
+                <p>한 분야의 전문가가 되는데 1만 시간이 소요된다고 합니다
+                <br>
+                   1/10000이 1이 될 때 까지 호기심을 가지고 
+                   <br>
+                   꾸준히 노력하는 개발자가 되고 싶습니다 
+            </p>
+            </div>
+        </section>
+        <section id="like">
+            <h1>Like</h1>
+            <div class="wrapper">
+            <div class="slider">
+                <div class="slider_item"><img src="img/sample01.jpg"></div>
+                <div class="slider_item"><img src="img/sample02.jpg"></div>
+                <div class="slider_item"><img src="img/sample03.jpg"></div>
+                <div class="slider_item"><img src="img/sample04.jpg"></div>
+            </div>
+            <script type="text/javascript">
+                const showing_class = "showing";
+                const firstSlide = document.querySelector(".slider_item:first-child");
+                function slide(){
+                    const currentSlide = document.querySelector(`.${showing_class}`); 
+                    if(currentSlide){
+                        currentSlide.classList.remove(showing_class);
+                        const nextSlide = currentSlide.nextElementSibling;
+                        if (nextSlide){
+                            console.log(currentSlide);
+                            nextSlide.classList.add(showing_class);
+                        } else {
+                            firstSlide.classList.add(showing_class);
+                        }
+        
+                    } else { 
+                        firstSlide.classList.add(showing_class); 
+                    }
+                }
+                slide();
+                setInterval(slide, 3000); 
+            </script>
+            <div class="slide_dsc">
+                <h2> "What i like"</h2>
+                <p>I love travel, cats, coffee and leisure</p>
+            </div>
+        </div>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="content">
+            <img class="call" src="./img/phone.jpg">
+                <div class="social_icon">
+                    <a href="https://github.com/leehyjein">
+                        <i class="fa-brands fa-github github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hyejindaumeilchul/">
+                        <i class="fa-brands fa-instagram instagram"></i>
+                    </a>
+                  
+                
+                        <a target="_blank" href="https://velog.io/@chickenrun" class="velog">
+                            <svg width="46" height="46" viewBox="0 -5 200 192" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" 
+                                d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451
+                                 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 
+                                 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 
+                                 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 
+                                 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z" 
+                                 fill="#12b886"></path></svg>
+                          
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
